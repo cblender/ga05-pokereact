@@ -37,26 +37,62 @@
   }
 }
 
+
 h1 {
-  text-align: center;
+  font-size: 69px;
+  line-height: 0px;
 }
 
-.flexbox {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.appContainerDoNotTouch {
+}
+
+.buttMenu {
+  position: fixed;
+  top: 40px;
+  right: 50px;
+}
+
+.buttEscape {
+
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  row-gap: 30px;
 }
 
-.spacer {
-  height: 100px;
+.headTitle {
+  position: fixed;
+  left:20px;
+  top:10px;
+  /* transform: translate(-50%,-50%); */
+  color: white;
+  text-align: left;
+}
+
+.headLogo {
+  position: absolute;
+  left:50vw;
+  top: -25px;
+  transform: translate(-50%,0);
+}
+
+.headSpace {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  height: 250px;
   display: block;
   text-align: center;
+}
+
+.headBack {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 150px;
+  background: black; 
 }

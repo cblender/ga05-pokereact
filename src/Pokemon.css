@@ -41,5 +41,19 @@
 }
 
 .pokeTitle {
-    transform: translate(0px, 100px)
+    transform: translate(0px, 120px);
+}
+
+.statFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 69vw;
+    
+}
+
+.stat {
+    margin-left: 20px;
+    margin-right: 20px;
 }

@@ -75,18 +75,28 @@ class Pokemon extends Component {
         if (show) {
             pokedex = 
                 <div className="pokedex" style={{zIndex:"100"}}>
-                    <h1>{this.state.pokeInfo.name}</h1>
-                    <img src={this.state.img}></img>
-                    <h3>{this.state.pokeInfo.types[0].type.name}</h3>
-                    <div>
-                        <h4>    
-                            Base XP: {this.state.XP} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                            HP: {this.state.HP} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            Atack: {this.state.ATK} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            Defense: {this.state.DEF} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            Speed: {this.state.SPD} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h1 style={{textTransform:"capitalize"}}>{this.state.pokeInfo.name}</h1>
+                    <img src={this.state.img} height="300px"></img>
+                    <h2 style={{textTransform:"capitalize"}}>Type: {this.state.pokeInfo.types[0].type.name}</h2>
+                    <div class="statFlex">
+                        <h3 class="stat">    
+                            Base XP: {this.state.XP}
+                        </h3>
+                        <h3 class="stat">  
+                            HP: {this.state.HP}
+                        </h3>
+                        <h3 class="stat">                             
+                            Atack: {this.state.ATK}
+                        </h3>
+                        <h3 class="stat">                             
+                            Defense: {this.state.DEF}
+                        </h3>
+                        <h3 class="stat">                             
+                            Speed: {this.state.SPD}
+                        </h3>
+                        <h3 class="stat">                             
                             Weight: {this.state.WEI}
-                        </h4>
+                        </h3>
                     </div>
                 </div>
                 
@@ -103,7 +113,7 @@ class Pokemon extends Component {
                 </div>
 
                 <div className="container" style={backgroundStyle}>
-                    <h3 className="pokeTitle" style={{zIndex:"-1"}}>{this.props.name}</h3>
+                    <h3 className="pokeTitle" style={{zIndex:"-1", textTransform:"capitalize"}}>{this.props.name}</h3>
                 </div>
 
                 
