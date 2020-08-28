@@ -39,14 +39,7 @@ class Pokemon extends Component {
         console.log("FIRED! handlePokedex for "+this.state.pokeInfo.name)
         console.log(this.state.pokeInfo, this.state.showPokedex)
         // console.log(this.state.pokeInfo.sprites.other.official-artwork.front_default)
-        if (!this.state.showPokedex) {
-            let bool = true
-            this.setState({showPokedex: bool})
-        }
-        else {
-            let bool = false
-            this.setState({showPokedex: bool})
-        }
+
         
         // THE GREAT POKEMON INFORMATION TRAWLER
 
@@ -58,12 +51,40 @@ class Pokemon extends Component {
         let statSPD = this.state.pokeInfo.stats[5].base_stat
         let statWeight = this.state.pokeInfo.weight
 
+        let type1 = this.state.pokeInfo.types[0].type.name
+        let typeArray = this.state.pokeInfo.types
+        let length = typeArray.length
+        let types = ''
+
+        if (length > 1) {
+            let type2 = this.state.pokeInfo.types[1].type.name
+            types += "Types: "
+            types += type1
+            types +=", "
+            types += type2
+        }
+        else {
+            types += "Type: "
+            types += type1
+        }
+        console.log(types)
+
+        this.setState({types: types})
         this.setState({XP: statXP})
         this.setState({HP: statHP})
         this.setState({ATK: statATK})
         this.setState({DEF: statDEF})
         this.setState({SPD: statSPD})
         this.setState({WEI: statWeight})
+
+        if (!this.state.showPokedex) {
+            let bool = true
+            this.setState({showPokedex: bool})
+        }
+        else {
+            let bool = false
+            this.setState({showPokedex: bool})
+        }
 
     }
 
@@ -77,24 +98,24 @@ class Pokemon extends Component {
                 <div className="pokedex" style={{zIndex:"100"}}>
                     <h1 style={{textTransform:"capitalize"}}>{this.state.pokeInfo.name}</h1>
                     <img src={this.state.img} height="300px"></img>
-                    <h2 style={{textTransform:"capitalize"}}>Type: {this.state.pokeInfo.types[0].type.name}</h2>
-                    <div class="statFlex">
-                        <h3 class="stat">    
+                    <h2 style={{textTransform:"capitalize"}}>{this.state.types}</h2>
+                    <div className="statFlex">
+                        <h3 className="stat">    
                             Base XP: {this.state.XP}
                         </h3>
-                        <h3 class="stat">  
+                        <h3 className="stat">  
                             HP: {this.state.HP}
                         </h3>
-                        <h3 class="stat">                             
+                        <h3 className="stat">                             
                             Atack: {this.state.ATK}
                         </h3>
-                        <h3 class="stat">                             
+                        <h3 className="stat">                             
                             Defense: {this.state.DEF}
                         </h3>
-                        <h3 class="stat">                             
+                        <h3 className="stat">                             
                             Speed: {this.state.SPD}
                         </h3>
-                        <h3 class="stat">                             
+                        <h3 className="stat">                             
                             Weight: {this.state.WEI}
                         </h3>
                     </div>
