@@ -68,11 +68,10 @@ h1 {
   top:10px;
   /* transform: translate(-50%,-50%); */
   color: white;
-  text-align: left;
 }
 
 .headLogo {
-  position: absolute;
+  position: fixed;
   left:50vw;
   top: -25px;
   transform: translate(-50%,0);
