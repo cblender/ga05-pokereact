@@ -74,7 +74,7 @@ class Pokemon extends Component {
 
         if (show) {
             pokedex = 
-                <div className="pokedex">
+                <div className="pokedex" style={{zIndex:"100"}}>
                     <h1>{this.state.pokeInfo.name}</h1>
                     <img src={this.state.img}></img>
                     <h3>{this.state.pokeInfo.types[0].type.name}</h3>
@@ -98,13 +98,15 @@ class Pokemon extends Component {
         return(
             <div className="pokeContainerDoNotTouch" onClick={this.handlePokedex}>
  
-                <div className="container" style={backgroundStyle}>
-                    <h3 className="pokeTitle">{this.props.name}</h3>
-                </div>
-
                 <div className="pokedexContainer">
                     {pokedex}
                 </div>
+
+                <div className="container" style={backgroundStyle}>
+                    <h3 className="pokeTitle" style={{zIndex:"-1"}}>{this.props.name}</h3>
+                </div>
+
+                
 
             </div>
         )

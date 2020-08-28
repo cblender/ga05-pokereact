@@ -63,11 +63,6 @@ class App extends Component {
             }
           )}  
         </div>
-
-        <div className="pokedex" style={{display:'none', color:'white', background:'black'}} >
-                    <p>Pokedex Placeholder Text</p>
-                    
-                </div>
       </div> // END DIV CLASS "appContainerDoNotTouch".
     )
   }

@@ -20,6 +20,7 @@
 }
 
 .pokedex {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,6 +29,7 @@
     height: 69vh;
     color: white;
     background: black;
+    z-index: 100;
 }
 
 .pokeExit {
