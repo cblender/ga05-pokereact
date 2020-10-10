@@ -52,7 +52,11 @@ h2 {
   right: 50px;
 }
 
-.buttEscape {
+.centerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -93,4 +97,49 @@ h2 {
   width: 100vw;
   height: 150px;
   background: black;
+}
+
+/* DON'T LOOK IT'S HIDEOUS */
+
+/* .flexBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+@media only screen and (max-width: 2000px) {
+  .flexBox {
+    width: 1800px;
+  }
+}
+@media only screen and (max-width: 1800px) {
+  .flexBox {
+    width: 1600px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .flexBox {
+    width: 1400px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .flexBox {
+    width: 1200px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .flexBox {
+    width: 1000px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .flexBox {
+    width: 800px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .flexBox {
+    width: 600px;
+  }
 }

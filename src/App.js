@@ -63,11 +63,15 @@ class App extends Component {
 
         <div className="headSpace"></div>
 
-        <div className="flexbox">
-          <div className="container">
-            {this.state.pokeList.map((pokemon, i) => {
-              return <Pokemon key={i} name={pokemon.name} url={pokemon.url} />;
-            })}
+        <div className="centerBox">
+          <div className="flexBox">
+            <div className="container">
+              {this.state.pokeList.map((pokemon, i) => {
+                return (
+                  <Pokemon key={i} name={pokemon.name} url={pokemon.url} />
+                );
+              })}
+            </div>
           </div>
         </div>
 
