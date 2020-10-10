@@ -17,6 +17,7 @@ class App extends Component {
     super(props);
     this.state = {
       pokeList: [],
+      nav: false,
     };
     this.pokeQuantity = 151;
     this.pokeGeneration = 1;
@@ -44,7 +45,13 @@ class App extends Component {
     this.fetchPokeList();
   }
 
-  render() {
+  handleNav = () => {
+    console.log("FIRED! handleNav for App");
+    this.setState({ nav: !this.state.nav });
+    console.log(this.state.nav);
+  };
+
+  render = () => {
     return (
       <div className="appContainerDoNotTouch">
         <div className="headBack"></div>
@@ -74,16 +81,11 @@ class App extends Component {
         </div>
 
         <div className="buttMenu">
-          <img
-            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c23eacf8-e366-4118-ab5c-5a1255842a75/de44dio-c44bc257-f323-4270-8985-9d001473ccbd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYzIzZWFjZjgtZTM2Ni00MTE4LWFiNWMtNWExMjU1ODQyYTc1XC9kZTQ0ZGlvLWM0NGJjMjU3LWYzMjMtNDI3MC04OTg1LTlkMDAxNDczY2NiZC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.7d4Fg-kB1tH2DqZqm-Al4OCChqvWwMPDXB-T064CMso"
-            alt="Menu Button"
-            width="69px"
-            height="69px"
-          ></img>
+          <Navbar />
         </div>
       </div> // END DIV CLASS "appContainerDoNotTouch".
     );
-  }
+  };
 }
 
 export default App;

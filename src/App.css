@@ -46,12 +46,9 @@ h2 {
   font-size: 30px;
 }
 
-.appContainerDoNotTouch {
-}
-
 .buttMenu {
   position: fixed;
-  top: 40px;
+  top: 0px;
   right: 50px;
 }
 

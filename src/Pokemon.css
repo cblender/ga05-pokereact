@@ -12,6 +12,10 @@
   display: none;
 }
 
+.pokeBox {
+  transform: translate(0px, 3vw);
+}
+
 .pokedexContainer {
   position: fixed;
   left: 50%;

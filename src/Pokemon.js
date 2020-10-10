@@ -117,8 +117,8 @@ class Pokemon extends Component {
             {this.state.NAME}
           </h1>
           <div className="pokeBox">
-            <h1 height="69px"></h1>
-            <img src={this.state.img} className="pokeImg"></img>
+            <div height="69px"></div>
+            <img src={this.state.img} className="pokeImg" alt="Pokemon"></img>
             <h2 style={{ textTransform: "capitalize" }}>{this.state.types}</h2>
             <h3 className="">{this.state.ABL}</h3>
             <div className="statFlex">
