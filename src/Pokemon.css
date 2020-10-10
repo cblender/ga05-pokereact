@@ -1,59 +1,93 @@
 .container {
-    text-align: center;
-    height: 125px;
+  text-align: center;
+  height: 125px;
 }
 
-.pokeContainerDoNotTouch{
-    width: 169px;
-    height: 169px;
+.pokeContainerDoNotTouch {
+  width: 169px;
+  height: 169px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-.pokedexContainer { 
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.pokedexContainer {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .pokedex {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 69vh;
-    color: white;
-    background: black;
-    z-index: 100;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -42%);
+  /*  */
+  width: 64vw;
+  height: 69vh;
+  min-height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /*  */
+  color: white;
+  background: black;
+  z-index: 100;
 }
 
 .pokeExit {
-    width: 50px;
-    height: 50px;
-    background: rgba(0,0,0,0);
-    color: white;
-    font-size: 36px;
+  position: absolute;
+  top: 3.33vw;
+  right: 3vw;
+  /* transform: translate(-50%, -50%); */
+  /*  */
+  width: 69px;
+  height: 69px;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 36px;
+  border: none;
+}
+
+.pokeImg {
+  height: 300px;
+  max-height: 30vh;
+}
+
+.pokeName {
+  position: absolute;
+  top: 2vw;
+}
+
+.pokeNum {
+  position: absolute;
+  top: 2vw;
+  left: 3vw;
 }
 
 .pokeTitle {
-    transform: translate(0px, 120px);
+  transform: translate(0px, 120px);
 }
 
 .statFlex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 69vw;
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
 }
 
 .stat {
-    margin-left: 20px;
-    margin-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media only screen and (max-height: 690px) {
+  .pokeImg {
+    display: none;
+  }
 }

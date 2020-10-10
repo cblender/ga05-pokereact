@@ -37,10 +37,13 @@
   }
 }
 
-
 h1 {
   font-size: 69px;
   line-height: 0px;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 .appContainerDoNotTouch {
@@ -53,7 +56,6 @@ h1 {
 }
 
 .buttEscape {
-
 }
 
 .container {
@@ -64,17 +66,17 @@ h1 {
 
 .headTitle {
   position: fixed;
-  left:20px;
-  top:10px;
+  left: 20px;
+  top: 10px;
   /* transform: translate(-50%,-50%); */
   color: white;
 }
 
 .headLogo {
   position: fixed;
-  left:50vw;
+  left: 50vw;
   top: -25px;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
 }
 
 .headSpace {
@@ -82,7 +84,7 @@ h1 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
+
   height: 250px;
   display: block;
   text-align: center;
@@ -93,5 +95,5 @@ h1 {
   top: 0;
   width: 100vw;
   height: 150px;
-  background: black; 
+  background: black;
 }
